@@ -1,0 +1,65 @@
+<div class="container">
+    <h1>Course Details</h1>
+    <div>
+        <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+            
+            <div class="form-group"> 
+                <label for="courseName">Course Name:</label> 
+                <input type="text" class="form-control" id="courseName" formControlName="courseName"
+                required>
+                <div *ngIf="courseName.invalid && (courseName.dirty || courseName.touched)"
+                class="alert alert-danger">
+
+             <div class="message" *ngIf="courseName.errors.required">
+             Name is required.
+             </div>
+             <div class="message" *ngIf="courseName.errors.minlength">
+             Name must be at least 4 characters long.
+            </div>
+            </div>
+          </div>
+
+            <div class="form-group">
+                <label for="courseDesc">Course Desc: </label>
+                <input type="text" class="form-control" id="courseDesc" formControlName="courseDesc">
+                
+            </div>
+
+            <div class="form-group">
+                <label for="courseFee">CourseFee:</label>
+                <input type="number" class="form-control" id="courseFee" formControlName="courseFee">
+            
+            </div>
+            <div class="address" formGroupName="address">
+                <h3>Address</h3>
+              <div>
+                <label>
+                  Street:
+                  <input type="text" formControlName="street">
+                </label>
+             </div>
+             <div>
+                <label>
+                  City:
+                  <input type="text" formControlName="city">
+                </label>
+            </div>   
+            <div>   
+                <label>
+                  State:
+                  <input type="text" formControlName="state">
+                </label>
+            </div>   
+            <div>  
+                <label>
+                  Zip Code:
+                  <input type="text" formControlName="zip">
+                </label>
+            </div>   
+              </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

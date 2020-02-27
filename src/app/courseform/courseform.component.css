@@ -1,0 +1,32 @@
+div {
+    width: 500px;
+    padding: 5px;
+    margin: 2px;
+  }
+  h1 {
+    text-align: center;
+    color: red;
+  }
+  .form-group {
+      color: rgb(226, 110, 43);
+      text-size-adjust: 100px;
+  }
+  .ng-valid[required], .ng-valid.required  {
+    border: 2px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border: 2px solid #a94442; /* red */
+  }
+  .message {
+    color: rgb(100, 237, 173);
+
+  }
+  .address {
+    color: rgb(29, 157, 231);
+    text-size-adjust: 200px;
+    
+  }
+  .ng-pending[required], .ng-pending.required  {
+    border: 2px solid #42A948; /* green */
+  }
